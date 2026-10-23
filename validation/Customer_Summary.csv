@@ -1,0 +1,41 @@
+﻿CustomerID,CustomerName,Region,Industry,AccountOwner,OutstandingCAD,OverdueCAD,Over90CAD,DisputedOverdueCAD
+C027,Sample Customer 27,British Columbia,Manufacturing,Team 3,62415.58,62415.58,36035.9,11365.49
+C018,Sample Customer 18,Quebec,Wholesale,Team 3,85428.25,57477.8,18739.95,18739.95
+C020,Sample Customer 20,Alberta,Wholesale,Team 2,75205.9,57357.19,16751.01,44296.86
+C031,Sample Customer 31,British Columbia,Professional Services,Team 1,64440.7,57205.8,10897.31,12857.56
+C017,Sample Customer 17,Ontario,Wholesale,Team 2,48349.5,48349.5,37930.07,12833.26
+C002,Sample Customer 02,Quebec,Wholesale,Team 2,57377.49,46165.25,24174.26,4398.05
+C028,Sample Customer 28,Alberta,Manufacturing,Team 1,54834.74,45568.18,26097.51,0.0
+C016,Sample Customer 16,Alberta,Professional Services,Team 1,59123.51,44928.23,35728.5,0.0
+C024,Sample Customer 24,Alberta,Technology,Team 3,89309.58,44730.2,12587.95,10140.9
+C019,Sample Customer 19,British Columbia,Wholesale,Team 1,61181.84,40120.12,22028.3,7206.54
+C015,Sample Customer 15,British Columbia,Professional Services,Team 3,58815.42,39965.98,34063.57,15063.22
+C010,Sample Customer 10,Quebec,Manufacturing,Team 1,50125.2,36523.57,35634.07,0.0
+C032,Sample Customer 32,Alberta,Professional Services,Team 2,39119.39,35826.59,17906.5,29098.94
+C004,Sample Customer 04,Alberta,Wholesale,Team 1,36235.55,32424.94,20804.37,1136.21
+C001,Sample Customer 01,Ontario,Wholesale,Team 1,68164.68,30124.16,10127.78,10127.78
+C005,Sample Customer 05,Ontario,Technology,Team 2,40466.48,28008.61,8207.5,0.0
+C011,Sample Customer 11,British Columbia,Manufacturing,Team 2,30250.71,26498.63,9448.53,3724.88
+C007,Sample Customer 07,British Columbia,Technology,Team 1,34833.27,23093.57,11289.4,0.0
+C030,Sample Customer 30,Quebec,Professional Services,Team 3,20923.42,20923.42,20923.42,0.0
+C034,Sample Customer 34,Quebec,Wholesale,Team 1,36129.71,20882.55,0.0,0.0
+C003,Sample Customer 03,British Columbia,Wholesale,Team 3,42686.92,19710.65,1355.39,16220.78
+C014,Sample Customer 14,Quebec,Professional Services,Team 2,18801.02,18801.02,0.0,0.0
+C029,Sample Customer 29,Ontario,Professional Services,Team 2,28871.54,17938.11,17938.11,17938.11
+C038,Sample Customer 38,Quebec,Technology,Team 2,48082.65,15940.18,811.17,0.0
+C006,Sample Customer 06,Quebec,Technology,Team 3,32521.76,15456.4,0.0,8607.76
+C037,Sample Customer 37,Ontario,Technology,Team 1,25208.84,14277.26,14277.26,14277.26
+C022,Sample Customer 22,Quebec,Technology,Team 1,32599.73,13817.92,13817.92,10157.25
+C012,Sample Customer 12,Alberta,Manufacturing,Team 3,13260.99,9831.44,3559.02,9831.44
+C040,Sample Customer 40,Alberta,Technology,Team 1,9183.25,9183.25,0.0,0.0
+C009,Sample Customer 09,Ontario,Manufacturing,Team 3,58024.88,8971.56,0.0,0.0
+C033,Sample Customer 33,Ontario,Wholesale,Team 3,22999.9,7483.44,0.0,0.0
+C021,Sample Customer 21,Ontario,Technology,Team 3,6447.99,6447.99,6447.99,0.0
+C025,Sample Customer 25,Ontario,Manufacturing,Team 1,8933.69,5397.64,0.0,0.0
+C035,Sample Customer 35,British Columbia,Wholesale,Team 2,7083.2,5307.27,0.0,0.0
+C008,Sample Customer 08,Alberta,Technology,Team 2,20196.16,5288.59,0.0,5288.59
+C023,Sample Customer 23,British Columbia,Technology,Team 2,4397.22,4397.22,4397.22,0.0
+C026,Sample Customer 26,Quebec,Manufacturing,Team 2,13785.36,3395.91,0.0,0.0
+C013,Sample Customer 13,Ontario,Professional Services,Team 1,19593.59,0.0,0.0,0.0
+C036,Sample Customer 36,Alberta,Wholesale,Team 3,21096.82,0.0,0.0,0.0
+C039,Sample Customer 39,British Columbia,Technology,Team 3,42464.76,0.0,0.0,0.0

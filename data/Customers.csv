@@ -1,0 +1,41 @@
+﻿CustomerID,CustomerName,Region,Industry,AccountOwner
+C001,Sample Customer 01,Ontario,Wholesale,Team 1
+C002,Sample Customer 02,Quebec,Wholesale,Team 2
+C003,Sample Customer 03,British Columbia,Wholesale,Team 3
+C004,Sample Customer 04,Alberta,Wholesale,Team 1
+C005,Sample Customer 05,Ontario,Technology,Team 2
+C006,Sample Customer 06,Quebec,Technology,Team 3
+C007,Sample Customer 07,British Columbia,Technology,Team 1
+C008,Sample Customer 08,Alberta,Technology,Team 2
+C009,Sample Customer 09,Ontario,Manufacturing,Team 3
+C010,Sample Customer 10,Quebec,Manufacturing,Team 1
+C011,Sample Customer 11,British Columbia,Manufacturing,Team 2
+C012,Sample Customer 12,Alberta,Manufacturing,Team 3
+C013,Sample Customer 13,Ontario,Professional Services,Team 1
+C014,Sample Customer 14,Quebec,Professional Services,Team 2
+C015,Sample Customer 15,British Columbia,Professional Services,Team 3
+C016,Sample Customer 16,Alberta,Professional Services,Team 1
+C017,Sample Customer 17,Ontario,Wholesale,Team 2
+C018,Sample Customer 18,Quebec,Wholesale,Team 3
+C019,Sample Customer 19,British Columbia,Wholesale,Team 1
+C020,Sample Customer 20,Alberta,Wholesale,Team 2
+C021,Sample Customer 21,Ontario,Technology,Team 3
+C022,Sample Customer 22,Quebec,Technology,Team 1
+C023,Sample Customer 23,British Columbia,Technology,Team 2
+C024,Sample Customer 24,Alberta,Technology,Team 3
+C025,Sample Customer 25,Ontario,Manufacturing,Team 1
+C026,Sample Customer 26,Quebec,Manufacturing,Team 2
+C027,Sample Customer 27,British Columbia,Manufacturing,Team 3
+C028,Sample Customer 28,Alberta,Manufacturing,Team 1
+C029,Sample Customer 29,Ontario,Professional Services,Team 2
+C030,Sample Customer 30,Quebec,Professional Services,Team 3
+C031,Sample Customer 31,British Columbia,Professional Services,Team 1
+C032,Sample Customer 32,Alberta,Professional Services,Team 2
+C033,Sample Customer 33,Ontario,Wholesale,Team 3
+C034,Sample Customer 34,Quebec,Wholesale,Team 1
+C035,Sample Customer 35,British Columbia,Wholesale,Team 2
+C036,Sample Customer 36,Alberta,Wholesale,Team 3
+C037,Sample Customer 37,Ontario,Technology,Team 1
+C038,Sample Customer 38,Quebec,Technology,Team 2
+C039,Sample Customer 39,British Columbia,Technology,Team 3
+C040,Sample Customer 40,Alberta,Technology,Team 1

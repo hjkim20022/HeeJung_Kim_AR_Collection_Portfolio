@@ -1,0 +1,30 @@
+// Add each measure separately: Modeling > New measure.
+// Format CAD amounts as currency and Overdue Share as a percentage.
+// These definitions still need validation in Power BI Desktop.
+
+Outstanding AR = SUM(ARSnapshot[OutstandingCAD])
+
+Overdue AR =
+CALCULATE([Outstanding AR], KEEPFILTERS(ARSnapshot[DaysOverdue] > 0))
+
+Overdue Share = DIVIDE([Overdue AR], [Outstanding AR])
+
+AR Over 90 Days =
+CALCULATE([Outstanding AR], KEEPFILTERS(ARSnapshot[DaysOverdue] > 90))
+
+Current AR =
+CALCULATE([Outstanding AR], KEEPFILTERS(ARSnapshot[DaysOverdue] = 0), KEEPFILTERS(ARSnapshot[OutstandingCAD] > 0))
+
+Open Invoices =
+CALCULATE(COUNTROWS(ARSnapshot), KEEPFILTERS(ARSnapshot[OutstandingCAD] > 0))
+
+Disputed Overdue AR =
+CALCULATE([Overdue AR], KEEPFILTERS(ARSnapshot[Disputed] = "Yes"))
+
+Priority Follow-up AR =
+CALCULATE([Outstanding AR], KEEPFILTERS(ARSnapshot[ActionGroup] = "Priority follow-up"))
+
+Cash Collected = SUM(Payments[PaymentAmountCAD])
+
+Snapshot Date Label =
+"Receivables as of " & FORMAT(CALCULATE(MAX(ARSnapshot[AsOfDate]), REMOVEFILTERS()), "dd mmm yyyy")

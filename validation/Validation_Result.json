@@ -1,0 +1,60 @@
+{
+  "engine": "SQLite plus independent Python Decimal reconciliation",
+  "snapshot_date": "2026-09-30",
+  "source": "AR_Collections_PowerBI_Starter.xlsx (synthetic, generated October 16, 2026)",
+  "sql_validation_checks": [
+    {
+      "CheckName": "Duplicate invoice IDs",
+      "IssueCount": 0
+    },
+    {
+      "CheckName": "Duplicate payment IDs",
+      "IssueCount": 0
+    },
+    {
+      "CheckName": "Invoices without customers",
+      "IssueCount": 0
+    },
+    {
+      "CheckName": "Payments without invoices",
+      "IssueCount": 0
+    },
+    {
+      "CheckName": "Payment customer mismatch",
+      "IssueCount": 0
+    },
+    {
+      "CheckName": "Payment before invoice",
+      "IssueCount": 0
+    },
+    {
+      "CheckName": "Due date before invoice",
+      "IssueCount": 0
+    },
+    {
+      "CheckName": "Nonpositive invoices",
+      "IssueCount": 0
+    },
+    {
+      "CheckName": "Nonpositive payments",
+      "IssueCount": 0
+    },
+    {
+      "CheckName": "Negative outstanding balances",
+      "IssueCount": 0
+    }
+  ],
+  "invoice_rows_compared_to_original": 480,
+  "comparison_mismatches": 0,
+  "balance_difference_cad": 0,
+  "aging_difference_cad": 0,
+  "boundary_tests": [
+    "Due today",
+    "1/30/31/60/61/90/91 days late",
+    "Paid invoice",
+    "Partial payment",
+    "Payment after cutoff excluded",
+    "Invoice after cutoff excluded"
+  ],
+  "power_bi_status": "Power Query, DAX, report interactions and publication still require testing in Power BI Desktop."
+}

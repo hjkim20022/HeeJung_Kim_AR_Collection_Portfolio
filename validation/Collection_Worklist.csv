@@ -1,0 +1,106 @@
+﻿InvoiceID,CustomerID,InvoiceDate,DueDate,InvoiceAmountCAD,PaidToDateCAD,OutstandingCAD,DaysOverdue,AgingBucket,AgingSort,Disputed,DisputeReason,AsOfDate,ActionGroup,CustomerName,Region,Industry,AccountOwner
+INV00312,C018,2026-04-03,2026-05-03,18739.95,0.0,18739.95,150,91+,5,Yes,Invoice detail query,2026-09-30,Dispute review,Sample Customer 18,Quebec,Wholesale,Team 3
+INV00134,C020,2026-02-03,2026-03-05,16751.01,0.0,16751.01,209,91+,5,Yes,Service acceptance pending,2026-09-30,Dispute review,Sample Customer 20,Alberta,Wholesale,Team 2
+INV00098,C032,2026-05-28,2026-07-12,15200.07,0.0,15200.07,80,61-90,4,Yes,Pricing query,2026-09-30,Dispute review,Sample Customer 32,Alberta,Professional Services,Team 2
+INV00249,C015,2026-03-24,2026-04-23,15063.22,0.0,15063.22,160,91+,5,Yes,Pricing query,2026-09-30,Dispute review,Sample Customer 15,British Columbia,Professional Services,Team 3
+INV00259,C020,2026-05-23,2026-07-22,14738.08,0.0,14738.08,70,61-90,4,Yes,Service acceptance pending,2026-09-30,Dispute review,Sample Customer 20,Alberta,Wholesale,Team 2
+INV00132,C003,2026-07-17,2026-08-16,13963.68,0.0,13963.68,45,31-60,3,Yes,Service acceptance pending,2026-09-30,Dispute review,Sample Customer 03,British Columbia,Wholesale,Team 3
+INV00251,C031,2026-08-03,2026-09-17,12857.56,0.0,12857.56,13,1-30,2,Yes,Invoice detail query,2026-09-30,Dispute review,Sample Customer 31,British Columbia,Professional Services,Team 1
+INV00152,C017,2026-04-26,2026-05-26,19743.48,6910.22,12833.26,127,91+,5,Yes,Pricing query,2026-09-30,Dispute review,Sample Customer 17,Ontario,Wholesale,Team 2
+INV00446,C020,2026-06-24,2026-07-24,19704.26,6896.49,12807.77,68,61-90,4,Yes,Pricing query,2026-09-30,Dispute review,Sample Customer 20,Alberta,Wholesale,Team 2
+INV00455,C029,2026-05-11,2026-06-10,11145.4,0.0,11145.4,112,91+,5,Yes,Invoice detail query,2026-09-30,Dispute review,Sample Customer 29,Ontario,Professional Services,Team 2
+INV00417,C022,2026-01-21,2026-03-07,10157.25,0.0,10157.25,207,91+,5,Yes,Invoice detail query,2026-09-30,Dispute review,Sample Customer 22,Quebec,Technology,Team 1
+INV00024,C024,2026-06-29,2026-07-29,15601.39,5460.49,10140.9,63,61-90,4,Yes,Service acceptance pending,2026-09-30,Dispute review,Sample Customer 24,Alberta,Technology,Team 3
+INV00195,C001,2026-04-06,2026-06-05,10127.78,0.0,10127.78,117,91+,5,Yes,Pricing query,2026-09-30,Dispute review,Sample Customer 01,Ontario,Wholesale,Team 1
+INV00399,C006,2026-05-08,2026-07-07,8607.76,0.0,8607.76,85,61-90,4,Yes,Pricing query,2026-09-30,Dispute review,Sample Customer 06,Quebec,Technology,Team 3
+INV00333,C032,2026-04-27,2026-05-27,12022.41,4207.84,7814.57,126,91+,5,Yes,Pricing query,2026-09-30,Dispute review,Sample Customer 32,Alberta,Professional Services,Team 2
+INV00283,C037,2026-05-11,2026-06-10,7710.23,0.0,7710.23,112,91+,5,Yes,Pricing query,2026-09-30,Dispute review,Sample Customer 37,Ontario,Technology,Team 1
+INV00203,C027,2026-01-08,2026-02-07,7431.09,0.0,7431.09,235,91+,5,Yes,Invoice detail query,2026-09-30,Dispute review,Sample Customer 27,British Columbia,Manufacturing,Team 3
+INV00027,C029,2026-04-29,2026-06-28,10450.33,3657.62,6792.71,94,91+,5,Yes,Pricing query,2026-09-30,Dispute review,Sample Customer 29,Ontario,Professional Services,Team 2
+INV00334,C037,2026-05-12,2026-05-27,6567.03,0.0,6567.03,126,91+,5,Yes,Pricing query,2026-09-30,Dispute review,Sample Customer 37,Ontario,Technology,Team 1
+INV00440,C012,2026-06-09,2026-07-24,6272.42,0.0,6272.42,68,61-90,4,Yes,Service acceptance pending,2026-09-30,Dispute review,Sample Customer 12,Alberta,Manufacturing,Team 3
+INV00395,C032,2026-01-22,2026-03-23,9360.46,3276.16,6084.3,191,91+,5,Yes,Invoice detail query,2026-09-30,Dispute review,Sample Customer 32,Alberta,Professional Services,Team 2
+INV00167,C019,2026-03-26,2026-04-10,8593.43,3007.7,5585.73,173,91+,5,Yes,Pricing query,2026-09-30,Dispute review,Sample Customer 19,British Columbia,Wholesale,Team 1
+INV00415,C008,2026-07-07,2026-08-06,5288.59,0.0,5288.59,55,31-60,3,Yes,Service acceptance pending,2026-09-30,Dispute review,Sample Customer 08,Alberta,Technology,Team 2
+INV00069,C002,2026-01-12,2026-02-11,4398.05,0.0,4398.05,231,91+,5,Yes,Service acceptance pending,2026-09-30,Dispute review,Sample Customer 02,Quebec,Wholesale,Team 2
+INV00329,C027,2026-08-29,2026-09-28,3934.4,0.0,3934.4,2,1-30,2,Yes,Pricing query,2026-09-30,Dispute review,Sample Customer 27,British Columbia,Manufacturing,Team 3
+INV00267,C011,2026-05-18,2026-06-02,5730.59,2005.71,3724.88,120,91+,5,Yes,Invoice detail query,2026-09-30,Dispute review,Sample Customer 11,British Columbia,Manufacturing,Team 2
+INV00144,C012,2026-01-15,2026-03-01,5475.42,1916.4,3559.02,213,91+,5,Yes,Invoice detail query,2026-09-30,Dispute review,Sample Customer 12,Alberta,Manufacturing,Team 3
+INV00430,C019,2026-07-25,2026-08-24,2493.56,872.75,1620.81,37,31-60,3,Yes,Pricing query,2026-09-30,Dispute review,Sample Customer 19,British Columbia,Wholesale,Team 1
+INV00140,C003,2026-03-06,2026-04-20,1355.39,0.0,1355.39,163,91+,5,Yes,Invoice detail query,2026-09-30,Dispute review,Sample Customer 03,British Columbia,Wholesale,Team 3
+INV00449,C004,2026-07-02,2026-08-01,1136.21,0.0,1136.21,60,31-60,3,Yes,Pricing query,2026-09-30,Dispute review,Sample Customer 04,Alberta,Wholesale,Team 1
+INV00239,C003,2026-05-21,2026-07-20,1387.24,485.53,901.71,72,61-90,4,Yes,Service acceptance pending,2026-09-30,Dispute review,Sample Customer 03,British Columbia,Wholesale,Team 3
+INV00189,C001,2026-07-06,2026-08-05,19996.38,0.0,19996.38,56,31-60,3,No,,2026-09-30,Priority follow-up,Sample Customer 01,Ontario,Wholesale,Team 1
+INV00001,C002,2026-03-14,2026-05-13,19776.21,0.0,19776.21,140,91+,5,No,,2026-09-30,Priority follow-up,Sample Customer 02,Quebec,Wholesale,Team 2
+INV00011,C010,2026-01-13,2026-02-12,19400.15,0.0,19400.15,230,91+,5,No,,2026-09-30,Priority follow-up,Sample Customer 10,Quebec,Manufacturing,Team 1
+INV00478,C015,2026-02-25,2026-04-11,19000.35,0.0,19000.35,172,91+,5,No,,2026-09-30,Priority follow-up,Sample Customer 15,British Columbia,Professional Services,Team 3
+INV00209,C016,2026-05-13,2026-06-27,18914.71,0.0,18914.71,95,91+,5,No,,2026-09-30,Priority follow-up,Sample Customer 16,Alberta,Professional Services,Team 1
+INV00294,C027,2026-03-29,2026-04-13,18481.44,0.0,18481.44,170,91+,5,No,,2026-09-30,Priority follow-up,Sample Customer 27,British Columbia,Manufacturing,Team 3
+INV00323,C028,2026-02-09,2026-03-26,16674.47,0.0,16674.47,188,91+,5,No,,2026-09-30,Priority follow-up,Sample Customer 28,Alberta,Manufacturing,Team 1
+INV00130,C019,2026-06-02,2026-06-17,16442.57,0.0,16442.57,105,91+,5,No,,2026-09-30,Priority follow-up,Sample Customer 19,British Columbia,Wholesale,Team 1
+INV00089,C010,2026-03-25,2026-04-24,16233.92,0.0,16233.92,159,91+,5,No,,2026-09-30,Priority follow-up,Sample Customer 10,Quebec,Manufacturing,Team 1
+INV00238,C004,2026-06-14,2026-06-29,15916.72,0.0,15916.72,93,91+,5,No,,2026-09-30,Priority follow-up,Sample Customer 04,Alberta,Wholesale,Team 1
+INV00352,C016,2026-02-07,2026-04-08,14243.29,0.0,14243.29,175,91+,5,No,,2026-09-30,Priority follow-up,Sample Customer 16,Alberta,Professional Services,Team 1
+INV00164,C030,2026-01-29,2026-02-28,13926.0,0.0,13926.0,214,91+,5,No,,2026-09-30,Priority follow-up,Sample Customer 30,Quebec,Professional Services,Team 3
+INV00071,C017,2026-02-24,2026-03-26,13376.27,0.0,13376.27,188,91+,5,No,,2026-09-30,Priority follow-up,Sample Customer 17,Ontario,Wholesale,Team 2
+INV00175,C020,2026-05-20,2026-07-04,13060.33,0.0,13060.33,88,61-90,4,No,,2026-09-30,Priority follow-up,Sample Customer 20,Alberta,Wholesale,Team 2
+INV00327,C024,2026-03-24,2026-04-23,12587.95,0.0,12587.95,160,91+,5,No,,2026-09-30,Priority follow-up,Sample Customer 24,Alberta,Technology,Team 3
+INV00131,C018,2026-05-29,2026-07-13,12281.29,0.0,12281.29,79,61-90,4,No,,2026-09-30,Priority follow-up,Sample Customer 18,Quebec,Wholesale,Team 3
+INV00305,C017,2026-01-06,2026-03-07,11720.54,0.0,11720.54,207,91+,5,No,,2026-09-30,Priority follow-up,Sample Customer 17,Ontario,Wholesale,Team 2
+INV00337,C027,2026-07-08,2026-08-07,11398.81,0.0,11398.81,54,31-60,3,No,,2026-09-30,Priority follow-up,Sample Customer 27,British Columbia,Manufacturing,Team 3
+INV00028,C007,2026-03-04,2026-04-03,11289.4,0.0,11289.4,180,91+,5,No,,2026-09-30,Priority follow-up,Sample Customer 07,British Columbia,Technology,Team 1
+INV00472,C031,2026-04-25,2026-06-09,10897.31,0.0,10897.31,113,91+,5,No,,2026-09-30,Priority follow-up,Sample Customer 31,British Columbia,Professional Services,Team 1
+INV00111,C004,2026-05-27,2026-07-26,10484.36,0.0,10484.36,66,61-90,4,No,,2026-09-30,Priority follow-up,Sample Customer 04,Alberta,Wholesale,Team 1
+INV00141,C027,2026-01-11,2026-01-26,10123.37,0.0,10123.37,247,91+,5,No,,2026-09-30,Priority follow-up,Sample Customer 27,British Columbia,Manufacturing,Team 3
+INV00362,C028,2026-05-15,2026-06-14,9423.04,0.0,9423.04,108,91+,5,No,,2026-09-30,Priority follow-up,Sample Customer 28,Alberta,Manufacturing,Team 1
+INV00476,C005,2026-05-04,2026-06-03,8207.5,0.0,8207.5,119,91+,5,No,,2026-09-30,Priority follow-up,Sample Customer 05,Ontario,Technology,Team 2
+INV00044,C030,2026-04-01,2026-05-01,6997.42,0.0,6997.42,152,91+,5,No,,2026-09-30,Priority follow-up,Sample Customer 30,Quebec,Professional Services,Team 3
+INV00445,C021,2026-02-01,2026-03-18,6447.99,0.0,6447.99,196,91+,5,No,,2026-09-30,Priority follow-up,Sample Customer 21,Ontario,Technology,Team 3
+INV00194,C011,2026-02-02,2026-03-04,5723.65,0.0,5723.65,210,91+,5,No,,2026-09-30,Priority follow-up,Sample Customer 11,British Columbia,Manufacturing,Team 2
+INV00450,C004,2026-01-17,2026-02-16,4887.65,0.0,4887.65,226,91+,5,No,,2026-09-30,Priority follow-up,Sample Customer 04,Alberta,Wholesale,Team 1
+INV00153,C023,2026-03-18,2026-04-17,4397.22,0.0,4397.22,166,91+,5,No,,2026-09-30,Priority follow-up,Sample Customer 23,British Columbia,Technology,Team 2
+INV00021,C032,2026-04-17,2026-06-16,4007.63,0.0,4007.63,106,91+,5,No,,2026-09-30,Priority follow-up,Sample Customer 32,Alberta,Professional Services,Team 2
+INV00265,C022,2026-05-27,2026-06-11,3660.67,0.0,3660.67,111,91+,5,No,,2026-09-30,Priority follow-up,Sample Customer 22,Quebec,Technology,Team 1
+INV00177,C016,2026-01-30,2026-03-31,2570.5,0.0,2570.5,183,91+,5,No,,2026-09-30,Priority follow-up,Sample Customer 16,Alberta,Professional Services,Team 1
+INV00112,C038,2026-01-08,2026-03-09,811.17,0.0,811.17,205,91+,5,No,,2026-09-30,Priority follow-up,Sample Customer 38,Quebec,Technology,Team 2
+INV00046,C005,2026-08-13,2026-09-27,19801.11,0.0,19801.11,3,1-30,2,No,,2026-09-30,Routine reminder,Sample Customer 05,Ontario,Technology,Team 2
+INV00403,C031,2026-08-28,2026-09-12,17592.94,0.0,17592.94,18,1-30,2,No,,2026-09-30,Routine reminder,Sample Customer 31,British Columbia,Professional Services,Team 1
+INV00236,C028,2026-07-22,2026-09-20,17258.27,0.0,17258.27,10,1-30,2,No,,2026-09-30,Routine reminder,Sample Customer 28,Alberta,Manufacturing,Team 1
+INV00178,C018,2026-08-30,2026-09-29,14670.46,0.0,14670.46,1,1-30,2,No,,2026-09-30,Routine reminder,Sample Customer 18,Quebec,Wholesale,Team 3
+INV00382,C002,2026-07-20,2026-09-03,14192.21,0.0,14192.21,27,1-30,2,No,,2026-09-30,Routine reminder,Sample Customer 02,Quebec,Wholesale,Team 2
+INV00335,C034,2026-07-23,2026-09-21,14014.82,0.0,14014.82,9,1-30,2,No,,2026-09-30,Routine reminder,Sample Customer 34,Quebec,Wholesale,Team 1
+INV00079,C014,2026-08-25,2026-09-24,12882.45,0.0,12882.45,6,1-30,2,No,,2026-09-30,Routine reminder,Sample Customer 14,Quebec,Professional Services,Team 2
+INV00345,C024,2026-07-14,2026-09-12,17979.5,5393.85,12585.65,18,1-30,2,No,,2026-09-30,Routine reminder,Sample Customer 24,Alberta,Technology,Team 3
+INV00220,C007,2026-08-12,2026-09-11,11804.17,0.0,11804.17,19,1-30,2,No,,2026-09-30,Routine reminder,Sample Customer 07,British Columbia,Technology,Team 1
+INV00423,C018,2026-08-17,2026-09-16,11786.1,0.0,11786.1,14,1-30,2,No,,2026-09-30,Routine reminder,Sample Customer 18,Quebec,Wholesale,Team 3
+INV00460,C011,2026-07-08,2026-09-06,16403.91,4921.17,11482.74,24,1-30,2,No,,2026-09-30,Routine reminder,Sample Customer 11,British Columbia,Manufacturing,Team 2
+INV00213,C031,2026-08-19,2026-09-18,11273.24,0.0,11273.24,12,1-30,2,No,,2026-09-30,Routine reminder,Sample Customer 31,British Columbia,Professional Services,Team 1
+INV00237,C027,2026-08-24,2026-09-23,15780.67,4734.2,11046.47,7,1-30,2,No,,2026-09-30,Routine reminder,Sample Customer 27,British Columbia,Manufacturing,Team 3
+INV00380,C038,2026-08-15,2026-09-14,10986.75,0.0,10986.75,16,1-30,2,No,,2026-09-30,Routine reminder,Sample Customer 38,Quebec,Technology,Team 2
+INV00344,C024,2026-08-06,2026-09-05,18831.41,9415.71,9415.7,25,1-30,2,No,,2026-09-30,Routine reminder,Sample Customer 24,Alberta,Technology,Team 3
+INV00319,C019,2026-08-03,2026-09-17,18672.24,9336.12,9336.12,13,1-30,2,No,,2026-09-30,Routine reminder,Sample Customer 19,British Columbia,Wholesale,Team 1
+INV00172,C016,2026-07-16,2026-08-15,9199.73,0.0,9199.73,46,31-60,3,No,,2026-09-30,Routine reminder,Sample Customer 16,Alberta,Professional Services,Team 1
+INV00123,C040,2026-05-04,2026-07-03,9183.25,0.0,9183.25,89,61-90,4,No,,2026-09-30,Routine reminder,Sample Customer 40,Alberta,Technology,Team 1
+INV00070,C009,2026-08-04,2026-09-18,8971.56,0.0,8971.56,12,1-30,2,No,,2026-09-30,Routine reminder,Sample Customer 09,Ontario,Manufacturing,Team 3
+INV00258,C017,2026-06-17,2026-07-02,8925.92,0.0,8925.92,90,61-90,4,No,,2026-09-30,Routine reminder,Sample Customer 17,Ontario,Wholesale,Team 2
+INV00040,C002,2026-08-10,2026-08-25,11141.11,3342.33,7798.78,36,31-60,3,No,,2026-09-30,Routine reminder,Sample Customer 02,Quebec,Wholesale,Team 2
+INV00307,C033,2026-07-19,2026-08-18,7483.44,0.0,7483.44,43,31-60,3,No,,2026-09-30,Routine reminder,Sample Customer 33,Ontario,Wholesale,Team 3
+INV00223,C019,2026-08-14,2026-08-29,17837.23,10702.34,7134.89,32,31-60,3,No,,2026-09-30,Routine reminder,Sample Customer 19,British Columbia,Wholesale,Team 1
+INV00316,C006,2026-07-16,2026-08-30,17121.61,10272.97,6848.64,31,31-60,3,No,,2026-09-30,Routine reminder,Sample Customer 06,Quebec,Technology,Team 3
+INV00087,C014,2026-06-29,2026-08-28,14796.43,8877.86,5918.57,33,31-60,3,No,,2026-09-30,Routine reminder,Sample Customer 14,Quebec,Professional Services,Team 2
+INV00002,C015,2026-07-05,2026-08-04,11804.82,5902.41,5902.41,57,31-60,3,No,,2026-09-30,Routine reminder,Sample Customer 15,British Columbia,Professional Services,Team 3
+INV00074,C011,2026-05-27,2026-07-26,11134.73,5567.37,5567.36,66,61-90,4,No,,2026-09-30,Routine reminder,Sample Customer 11,British Columbia,Manufacturing,Team 2
+INV00313,C034,2026-07-18,2026-09-16,13802.44,8281.46,5520.98,14,1-30,2,No,,2026-09-30,Routine reminder,Sample Customer 34,Quebec,Wholesale,Team 1
+INV00281,C025,2026-06-04,2026-07-19,5397.64,0.0,5397.64,73,61-90,4,No,,2026-09-30,Routine reminder,Sample Customer 25,Ontario,Manufacturing,Team 1
+INV00248,C035,2026-08-14,2026-09-13,5307.27,0.0,5307.27,17,1-30,2,No,,2026-09-30,Routine reminder,Sample Customer 35,British Columbia,Wholesale,Team 2
+INV00245,C031,2026-07-13,2026-09-11,6549.64,1964.89,4584.75,19,1-30,2,No,,2026-09-30,Routine reminder,Sample Customer 31,British Columbia,Professional Services,Team 1
+INV00426,C038,2026-07-27,2026-09-10,4979.23,1493.77,3485.46,20,1-30,2,No,,2026-09-30,Routine reminder,Sample Customer 38,Quebec,Technology,Team 2
+INV00310,C026,2026-06-29,2026-07-29,3395.91,0.0,3395.91,63,61-90,4,No,,2026-09-30,Routine reminder,Sample Customer 26,Quebec,Manufacturing,Team 2
+INV00448,C032,2026-07-30,2026-09-28,5440.05,2720.03,2720.02,2,1-30,2,No,,2026-09-30,Routine reminder,Sample Customer 32,Alberta,Professional Services,Team 2
+INV00285,C003,2026-08-14,2026-09-28,2417.0,0.0,2417.0,2,1-30,2,No,,2026-09-30,Routine reminder,Sample Customer 03,British Columbia,Wholesale,Team 3
+INV00116,C028,2026-07-16,2026-08-15,5530.99,3318.59,2212.4,46,31-60,3,No,,2026-09-30,Routine reminder,Sample Customer 28,Alberta,Manufacturing,Team 1
+INV00218,C017,2026-07-30,2026-09-28,3733.78,2240.27,1493.51,2,1-30,2,No,,2026-09-30,Routine reminder,Sample Customer 17,Ontario,Wholesale,Team 2
+INV00025,C034,2026-08-26,2026-09-10,3366.88,2020.13,1346.75,20,1-30,2,No,,2026-09-30,Routine reminder,Sample Customer 34,Quebec,Wholesale,Team 1
+INV00201,C003,2026-06-20,2026-08-04,2145.75,1072.88,1072.87,57,31-60,3,No,,2026-09-30,Routine reminder,Sample Customer 03,British Columbia,Wholesale,Team 3
+INV00102,C010,2026-07-03,2026-08-17,889.5,0.0,889.5,44,31-60,3,No,,2026-09-30,Routine reminder,Sample Customer 10,Quebec,Manufacturing,Team 1
+INV00158,C038,2026-08-16,2026-09-15,656.8,0.0,656.8,15,1-30,2,No,,2026-09-30,Routine reminder,Sample Customer 38,Quebec,Technology,Team 2
