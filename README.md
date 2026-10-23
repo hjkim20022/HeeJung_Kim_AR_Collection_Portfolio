@@ -6,9 +6,18 @@ A finance analytics portfolio case study prepared for HeeJung Kim.
 
 **Status:** SQL analysis and reconciliation completed. Power BI build materials prepared. The interactive report and public link are pending.
 
-![Executive overview design preview](preview/01_Overview.png)
+## Three-page dashboard preview
 
-*Design preview generated from the calculated dataset. This is not a Power BI screenshot. See [the three-page preview](preview/AR_Portfolio_Preview.pdf).*
+The portfolio covers **all three pages** of the Accounts Receivable & Collections report design:
+
+| 01 — Overview | 02 — Customers | 03 — Collection worklist |
+|:---:|:---:|:---:|
+| [![Overview: receivables KPIs, aging and monthly cash collections](preview/01_Overview.png)](preview/01_Overview.png) | [![Customers: top overdue accounts and disputed balances](preview/02_Customers.png)](preview/02_Customers.png) | [![Collection worklist: overdue invoice review and follow-up queues](preview/03_Worklist.png)](preview/03_Worklist.png) |
+| Outstanding and overdue KPIs, aging bands and cash collected by month | Customer concentration, top five overdue accounts and dispute review | Invoice-level follow-up priorities, disputes and reconciliation |
+
+**[Open the complete three-page PDF →](preview/AR_Portfolio_Preview.pdf)**
+
+*These three images and the PDF are design previews generated from the synthetic, calculated dataset—not screenshots from a finished Power BI report. The interactive Power BI report is still being built and tested.*
 
 ## Data and scope
 
