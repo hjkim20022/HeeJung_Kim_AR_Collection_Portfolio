@@ -1,6 +1,4 @@
-// Add each measure separately: Modeling > New measure.
-// Format CAD amounts as currency and Overdue Share as a percentage.
-// These definitions still need validation in Power BI Desktop.
+
 
 Outstanding AR = SUM(ARSnapshot[OutstandingCAD])
 
