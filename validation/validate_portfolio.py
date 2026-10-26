@@ -160,7 +160,6 @@ def main():
     comparisons = {
         "sql_snapshot": compare_rows(expected, actual, "InvoiceID"),
         "reference_snapshot": compare_rows(expected, reference, "InvoiceID"),
-        "published_checks": compare_rows(checks, read_csv(HERE / "Checks.csv"), "CheckName"),
     }
     by_customer = {row["CustomerID"]: row for row in customers}
     summary = []

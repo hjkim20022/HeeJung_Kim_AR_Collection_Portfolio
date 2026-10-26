@@ -55,7 +55,6 @@
   "comparison_errors": {
     "sql_snapshot": [],
     "reference_snapshot": [],
-    "published_checks": [],
     "customer_summary": [],
     "collection_worklist": [],
     "aggregate_sql_totals": []

@@ -1,101 +1,92 @@
-# Accounts Receivable & Collections
+# Accounts Receivable & Collections Analytics
 
-**Project owner: HeeJung Kim** · Personal finance analytics portfolio
+**HeeJung Kim** · Power BI · SQL · Python · Financial Analysis
 
-**Business question:** Which customers hold overdue balances, how old are those balances, and which invoices should a collections team review first?
+This personal portfolio project analyzes receivables, overdue balances and collection priorities for 40 fictional customers.
 
-**Status:** SQL analysis and reconciliation are complete. This repository includes Power Query, DAX and report designs; Power BI Desktop validation and a published interactive report are not yet documented.
+## Portfolio
 
-## Three-page portfolio
-
-The portfolio covers **all three pages** of the Accounts Receivable & Collections report design:
-
-| 01 — Overview | 02 — Customers | 03 — Collection worklist |
+| Overview | Customers | Collection worklist |
 |:---:|:---:|:---:|
-| [![Overview: receivables KPIs, aging and monthly cash collections](portfolio/01_Overview.png)](portfolio/01_Overview.png) | [![Customers: top overdue accounts and disputed balances](portfolio/02_Customers.png)](portfolio/02_Customers.png) | [![Collection worklist: overdue invoice review and follow-up queues](portfolio/03_Worklist.png)](portfolio/03_Worklist.png) |
-| Outstanding and overdue KPIs, aging bands and cash collected by month | Customer concentration, top five overdue accounts and dispute review | Invoice-level follow-up priorities, disputes and reconciliation |
+| [![Receivables, aging and monthly cash collections](portfolio/01_Overview.png)](portfolio/01_Overview.png) | [![Overdue customer balances and disputes](portfolio/02_Customers.png)](portfolio/02_Customers.png) | [![Invoice priorities and reconciliation](portfolio/03_Worklist.png)](portfolio/03_Worklist.png) |
 
-**[View my three-page portfolio PDF →](portfolio/HeeJung_Kim_AR_Collections_Portfolio.pdf)**
+**[View the three-page portfolio PDF](portfolio/HeeJung_Kim_AR_Collections_Portfolio.pdf)**
 
-*The images and PDF present the report design using validated synthetic data. They are design previews. Completed Power BI screenshots and an interactive report link are not yet included.*
+The PDF and images are static report designs based on validated SQL outputs. Power Query and DAX source files are included; Power BI Desktop testing is not documented in this repository.
 
-## Data and scope
+## Business findings
 
-40 fictional customers, 480 invoices and 425 payment allocations. Reporting date: **30 September 2026**. All amounts are CAD. Source: the synthetic CSV inputs in the [`data`](data) folder. This is a portfolio demonstration, not employer or client data.
+Reporting date: **30 September 2026**. All amounts are CAD.
 
-Invoices and payments cover January to September 2026. There are no opening receivables, credit notes, refunds, write-offs, foreign exchange or tax adjustments. Every payment is allocated to an invoice. This is one balance snapshot; monthly collections are cash receipts, not a trend of historical receivables balances.
+- **$980,235.72 overdue:** 63.3% of the $1,548,971.19 outstanding balance. There are 105 overdue invoices among 165 open invoices.
+- **$471,979.98 more than 90 days overdue:** 48.1% of overdue receivables.
+- **$282,805.87 concentrated in five customers:** C027, C018, C020, C031 and C017 account for 28.9% of overdue receivables. Disputed overdue balances across all customers total $263,310.83.
 
-## Three findings
+## Recommendations
 
-1. **$980,235.72 is overdue, or 63.3% of $1,548,971.19 outstanding.** There are 105 overdue invoices among 165 open invoices.
-2. **$471,979.98 is more than 90 days overdue.** This is 48.1% of overdue receivables and identifies a large group for review. Age alone does not establish default or uncollectibility.
-3. **The five largest overdue customer balances total $282,805.87, or 28.9% of overdue receivables.** Customers C027, C018, C020, C031 and C017 provide a focused starting list. Across all customers, disputed overdue invoices total $263,310.83.
+1. Review the five largest overdue accounts with their account owners. Confirm invoice details and prior correspondence, then assign the next action and contact date.
+2. Route disputed invoices to a separate resolution queue with an owner, required evidence and target resolution date.
 
-## Two proposed actions
+These recommendations use synthetic data; their effect on cash recovery has not been measured.
 
-1. **Review the top five overdue accounts with their account owners.** Check invoice details and prior correspondence, prioritize older undisputed balances, agree the next follow-up, and track an owner and next-contact date.
-2. **Route disputed invoices to a separate resolution queue.** Review the $263,310.83 disputed overdue balance with the relevant owner before routine collection reminders. Record the reason, evidence required, next step and target resolution date.
+## Data and calculations
 
-These are proposed actions supported by the synthetic data. Their effect on collections has not been measured.
+The [source data](data) contains 40 customers, 480 invoices and 425 payment allocations from January to September 2026. The scope excludes opening receivables, credit notes, refunds, write-offs, foreign exchange and tax adjustments.
 
-## Calculation and validation
-
-Payments are grouped by InvoiceID before joining to invoices. This keeps one row per invoice and prevents invoice amounts from being multiplied by partial-payment rows.
-
-- Outstanding = invoice amount minus payments dated on or before the snapshot date.
-- An invoice due on the snapshot date is current. Overdue requires a positive outstanding balance and a due date before the snapshot date.
-- Aging bands: Current, 1-30, 31-60, 61-90 and 91+ days.
-- Fully paid invoices are excluded from aging exposure.
-- The collection action categories are transparent demonstration rules, not a credit-risk prediction.
+- Payments are aggregated by InvoiceID before joining invoices, preserving one row per invoice.
+- Outstanding balance equals invoice amount less payments through the reporting date.
+- A positive balance is overdue when its due date precedes the reporting date.
+- Aging bands are Current, 1–30, 31–60, 61–90 and 91+ days. Fully paid invoices have zero aging exposure.
+- Disputed overdue invoices enter the dispute queue. Other overdue balances enter priority follow-up when more than 90 days late, or more than 30 days late with at least $10,000 outstanding. The remaining overdue invoices enter the routine reminder queue.
+- Monthly cash collections use payment dates. Receivables balances use the fixed reporting date.
 
 | Reconciliation | CAD |
 |---|---:|
-| Invoice amount | 4,873,723.46 |
+| Invoice amounts | 4,873,723.46 |
 | Payments through 30 September | 3,324,752.27 |
 | Outstanding balance | 1,548,971.19 |
 | Current plus overdue | 1,548,971.19 |
 | Difference | 0.00 |
 
-Run `python validation/validate_portfolio.py` to reproduce the checks. The script reruns the SQLite analysis, independently calculates balances and aging with Python Decimal, compares all 480 invoice rows with the committed reference snapshot, checks 40 customer summary rows and 105 collection worklist rows, and runs 18 boundary tests. The latest results show zero issues across the 10 SQL checks, no row discrepancies, and a CAD 0.00 difference in both balance and aging reconciliation.
+## Validation
 
-See [how validation works](validation/README.md), the [validation script](validation/validate_portfolio.py), and the [machine-readable results](validation/Validation_Result.json).
+**All 10 data-quality checks and 18 boundary tests pass.** An independent Python Decimal calculation matches all 480 invoice rows, 40 customer summaries and 105 collection worklist rows.
 
-The automated checks cover the source data and SQL results. Power Query refreshes, DAX measures and report interactions require separate validation in Power BI Desktop.
+[Validation method](validation/README.md) · [Validation results](validation/Validation_Result.json)
 
-## Reproduce the SQL analysis
+## Reproduce the analysis
 
-Requires Python 3. No additional packages are needed.
+Requires Python 3; no additional packages are needed. From the repository root:
 
 ```bash
-python sql/run_analysis.py
+python validation/validate_portfolio.py
 ```
 
-The script reads the CSVs, runs SQLite SQL, and writes `sql/results/ARSnapshot.csv` and `sql/results/Reconciliation.json`. Dates use ISO YYYY-MM-DD. The transformation uses integer cents for aggregation. Duplicate primary keys stop the load.
+This command runs the SQL analysis, compares its outputs with the reference files and runs the boundary tests. It writes analysis outputs to `sql/results/` and refreshes `validation/Validation_Result.json`.
 
-- [Snapshot transformation](sql/01_snapshot.sql)
-- [Validation queries](sql/02_validation.sql)
-- [Power Query transformation](powerbi/ARSnapshot.pq)
-- [DAX measures](powerbi/Measures.dax)
-- [Project guide and Power BI setup](START_HERE.md)
+For SQL output only, run `python sql/run_analysis.py`.
 
-## Report design
+## Power BI configuration
 
-1. **Overview:** outstanding and overdue balances, aging distribution and monthly cash collections.
-2. **Customers:** overdue exposure by customer, concentration and proposed actions.
-3. **Collection worklist:** invoice detail, owner, outstanding amount, days overdue, dispute reason and proposed action category.
+- **Inputs:** Import Customers, Invoices, Payments and Calendar from the [CSV files](data), using those query names. IDs use Text, dates use Date, amounts use Fixed decimal number and sorting fields use Whole number.
+- **Snapshot:** Use [ARSnapshot.pq](powerbi/ARSnapshot.pq) as a query named ARSnapshot. Its reporting date is 30 September 2026.
+- **Measures:** Add each definition in [Measures.dax](powerbi/Measures.dax) as a separate measure.
+- **Sort order:** Sort ARSnapshot[AgingBucket] by AgingSort and Calendar[YearMonth] by YearMonthSort.
+- **Relationships:** Use one-to-many, single-direction relationships from Customers[CustomerID] to ARSnapshot[CustomerID] and Payments[CustomerID], and from Calendar[Date] to Payments[PaymentDate]. Calendar filters cash receipts only.
 
-The intended model uses Customers to filter ARSnapshot and Payments, and Calendar to filter Payments only. The AR snapshot remains fixed at 30 September 2026.
+The unfiltered reference totals are **$1,548,971.19 outstanding** and **$980,235.72 overdue**. Desktop verification covers refresh, measures, relationships, filters and navigation.
+
+## Repository contents
+
+| Folder | Contents |
+|---|---|
+| [data](data) | Synthetic inputs and the reference invoice snapshot |
+| [sql](sql) | Snapshot transformation, data-quality queries and analysis runner |
+| [powerbi](powerbi) | Power Query and DAX source |
+| [portfolio](portfolio) | Three report designs and the portfolio PDF |
+| [validation](validation) | Validation script, results, customer summaries and collection worklist |
 
 ## Profile
 
-[LinkedIn](https://www.linkedin.com/in/hee-jung-kim-1428781bb/) | [GitHub](https://github.com/hjkim20022)
-
-## Technical references
-
-- [Microsoft: star schema guidance](https://learn.microsoft.com/en-us/power-bi/guidance/star-schema)
-- [Microsoft: group rows in Power Query](https://learn.microsoft.com/en-us/power-query/group-by)
-- [Microsoft: merge queries](https://learn.microsoft.com/en-us/power-query/merge-queries-overview)
-- [Microsoft: CALCULATE](https://learn.microsoft.com/en-us/dax/calculate-function-dax)
-- [Microsoft: drill-through](https://learn.microsoft.com/en-us/power-bi/create-reports/desktop-drillthrough)
-- [Microsoft: Publish to web](https://learn.microsoft.com/en-us/power-bi/collaborate-share/service-publish-to-web)
+[LinkedIn](https://www.linkedin.com/in/hee-jung-kim-1428781bb/) · [GitHub](https://github.com/hjkim20022)
 
