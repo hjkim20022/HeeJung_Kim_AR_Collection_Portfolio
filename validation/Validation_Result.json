@@ -1,7 +1,14 @@
 {
+  "status": "passed",
   "engine": "SQLite plus independent Python Decimal reconciliation",
   "snapshot_date": "2026-09-30",
-  "source": "AR_Collections_PowerBI_Starter.xlsx (synthetic, generated October 16, 2026)",
+  "source": "Committed synthetic CSV inputs in data/",
+  "reproduce": "python validation/validate_portfolio.py",
+  "source_counts": {
+    "customers": 40,
+    "invoices": 480,
+    "payment_allocations": 425
+  },
   "sql_validation_checks": [
     {
       "CheckName": "Duplicate invoice IDs",
@@ -44,17 +51,99 @@
       "IssueCount": 0
     }
   ],
-  "invoice_rows_compared_to_original": 480,
-  "comparison_mismatches": 0,
-  "balance_difference_cad": 0,
-  "aging_difference_cad": 0,
+  "invoice_rows_compared_to_reference_snapshot": 480,
+  "comparison_errors": {
+    "sql_snapshot": [],
+    "reference_snapshot": [],
+    "published_checks": [],
+    "customer_summary": [],
+    "collection_worklist": [],
+    "aggregate_sql_totals": []
+  },
+  "totals_cad": {
+    "invoice_amount_cad": "4873723.46",
+    "payments_cad": "3324752.27",
+    "outstanding_cad": "1548971.19",
+    "current_cad": "568735.47",
+    "overdue_cad": "980235.72"
+  },
+  "balance_difference_cad": "0.00",
+  "aging_difference_cad": "0.00",
+  "customer_summary_rows_compared": 40,
+  "collection_worklist_rows_compared": 105,
   "boundary_tests": [
-    "Due today",
-    "1/30/31/60/61/90/91 days late",
-    "Paid invoice",
-    "Partial payment",
-    "Payment after cutoff excluded",
-    "Invoice after cutoff excluded"
+    {
+      "case": "Aging at 0 days overdue",
+      "passed": true
+    },
+    {
+      "case": "Aging at 1 day overdue",
+      "passed": true
+    },
+    {
+      "case": "Aging at 30 days overdue",
+      "passed": true
+    },
+    {
+      "case": "Aging at 31 days overdue",
+      "passed": true
+    },
+    {
+      "case": "Aging at 60 days overdue",
+      "passed": true
+    },
+    {
+      "case": "Aging at 61 days overdue",
+      "passed": true
+    },
+    {
+      "case": "Aging at 90 days overdue",
+      "passed": true
+    },
+    {
+      "case": "Aging at 91 days overdue",
+      "passed": true
+    },
+    {
+      "case": "Paid invoice",
+      "passed": true
+    },
+    {
+      "case": "Two partial payments preserve invoice grain",
+      "passed": true
+    },
+    {
+      "case": "Payment after cutoff excluded",
+      "passed": true
+    },
+    {
+      "case": "Payment on cutoff included",
+      "passed": true
+    },
+    {
+      "case": "Invoice after cutoff excluded",
+      "passed": true
+    },
+    {
+      "case": "Dispute takes priority over age",
+      "passed": true
+    },
+    {
+      "case": "Credit balance routed for review",
+      "passed": true
+    },
+    {
+      "case": "10000 CAD at 30 days remains routine",
+      "passed": true
+    },
+    {
+      "case": "Below 10000 CAD at 31 days remains routine",
+      "passed": true
+    },
+    {
+      "case": "10000 CAD at 31 days enters priority queue",
+      "passed": true
+    }
   ],
-  "power_bi_status": "Power Query, DAX, report interactions and publication still require testing in Power BI Desktop."
+  "power_bi_status": "Power Query, DAX, report interactions and publication require separate testing in Power BI Desktop."
 }

@@ -1,27 +1,27 @@
 # Accounts Receivable & Collections
 
-A finance analytics portfolio case study prepared for HeeJung Kim.
+**Project owner: HeeJung Kim** · Personal finance analytics portfolio
 
 **Business question:** Which customers hold overdue balances, how old are those balances, and which invoices should a collections team review first?
 
-**Status:** SQL analysis and reconciliation completed. Power BI build materials prepared. The interactive report and public link are pending.
+**Status:** SQL analysis and reconciliation are complete. This repository includes Power Query, DAX and report designs; Power BI Desktop validation and a published interactive report are not yet documented.
 
-## Three-page dashboard preview
+## Three-page portfolio
 
 The portfolio covers **all three pages** of the Accounts Receivable & Collections report design:
 
 | 01 — Overview | 02 — Customers | 03 — Collection worklist |
 |:---:|:---:|:---:|
-| [![Overview: receivables KPIs, aging and monthly cash collections](preview/01_Overview.png)](preview/01_Overview.png) | [![Customers: top overdue accounts and disputed balances](preview/02_Customers.png)](preview/02_Customers.png) | [![Collection worklist: overdue invoice review and follow-up queues](preview/03_Worklist.png)](preview/03_Worklist.png) |
+| [![Overview: receivables KPIs, aging and monthly cash collections](portfolio/01_Overview.png)](portfolio/01_Overview.png) | [![Customers: top overdue accounts and disputed balances](portfolio/02_Customers.png)](portfolio/02_Customers.png) | [![Collection worklist: overdue invoice review and follow-up queues](portfolio/03_Worklist.png)](portfolio/03_Worklist.png) |
 | Outstanding and overdue KPIs, aging bands and cash collected by month | Customer concentration, top five overdue accounts and dispute review | Invoice-level follow-up priorities, disputes and reconciliation |
 
-**[Open the complete three-page PDF →](preview/AR_Portfolio_Preview.pdf)**
+**[View my three-page portfolio PDF →](portfolio/HeeJung_Kim_AR_Collections_Portfolio.pdf)**
 
-*These three images and the PDF are design previews generated from the synthetic, calculated dataset—not screenshots from a finished Power BI report. The interactive Power BI report is still being built and tested.*
+*The images and PDF present the report design using validated synthetic data. They are design previews. Completed Power BI screenshots and an interactive report link are not yet included.*
 
 ## Data and scope
 
-40 fictional customers, 480 invoices and 425 payment allocations. Reporting date: **30 September 2026**. All amounts are CAD. Source: the synthetic starter workbook generated on 16 October 2026. This is a portfolio demonstration, not employer or client data.
+40 fictional customers, 480 invoices and 425 payment allocations. Reporting date: **30 September 2026**. All amounts are CAD. Source: the synthetic CSV inputs in the [`data`](data) folder. This is a portfolio demonstration, not employer or client data.
 
 Invoices and payments cover January to September 2026. There are no opening receivables, credit notes, refunds, write-offs, foreign exchange or tax adjustments. Every payment is allocated to an invoice. This is one balance snapshot; monthly collections are cash receipts, not a trend of historical receivables balances.
 
@@ -56,9 +56,11 @@ Payments are grouped by InvoiceID before joining to invoices. This keeps one row
 | Current plus overdue | 1,548,971.19 |
 | Difference | 0.00 |
 
-The SQL output was independently reconciled using Python Decimal calculations and compared with all 480 invoice rows in the original workbook. There were no balance or aging mismatches. Ten data checks returned zero issues. Boundary tests covered aging cutoffs, paid and partially paid invoices, and future transactions. Details: [validation result](validation/Validation_Result.json).
+Run `python validation/validate_portfolio.py` to reproduce the checks. The script reruns the SQLite analysis, independently calculates balances and aging with Python Decimal, compares all 480 invoice rows with the committed reference snapshot, checks 40 customer summary rows and 105 collection worklist rows, and runs 18 boundary tests. The latest results show zero issues across the 10 SQL checks, no row discrepancies, and a CAD 0.00 difference in both balance and aging reconciliation.
 
-Power Query, DAX and Power BI interactions still need to be tested in Desktop. A successful SQL check does not establish that the report has been built correctly.
+See [how validation works](validation/README.md), the [validation script](validation/validate_portfolio.py), and the [machine-readable results](validation/Validation_Result.json).
+
+The automated checks cover the source data and SQL results. Power Query refreshes, DAX measures and report interactions require separate validation in Power BI Desktop.
 
 ## Reproduce the SQL analysis
 
@@ -74,9 +76,7 @@ The script reads the CSVs, runs SQLite SQL, and writes `sql/results/ARSnapshot.c
 - [Validation queries](sql/02_validation.sql)
 - [Power Query transformation](powerbi/ARSnapshot.pq)
 - [DAX measures](powerbi/Measures.dax)
-- [Power BI build guide](docs/Power_BI_Build_Guide.md)
-- [Data dictionary](docs/Data_Dictionary.md)
-- [Walkthrough practice](docs/Walkthrough.md)
+- [Project guide and Power BI setup](START_HERE.md)
 
 ## Report design
 
@@ -98,3 +98,4 @@ The intended model uses Customers to filter ARSnapshot and Payments, and Calenda
 - [Microsoft: CALCULATE](https://learn.microsoft.com/en-us/dax/calculate-function-dax)
 - [Microsoft: drill-through](https://learn.microsoft.com/en-us/power-bi/create-reports/desktop-drillthrough)
 - [Microsoft: Publish to web](https://learn.microsoft.com/en-us/power-bi/collaborate-share/service-publish-to-web)
+

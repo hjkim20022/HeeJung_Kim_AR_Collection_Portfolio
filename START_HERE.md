@@ -1,36 +1,59 @@
-# Build your new featured Power BI portfolio
+# Accounts Receivable and Collections Project Guide
 
-**Project:** Accounts Receivable & Collections
+**Project owner: HeeJung Kim** · Personal finance analytics portfolio
 
-This project connects your treasury experience with Power BI, SQL and reporting. Feature it first for Data Analyst, Reporting Analyst and finance reporting applications. Keep your retail and Fabric projects as supporting work.
+This case study uses synthetic invoices and payment allocations to show how a collections team can review overdue balances and prioritize follow-up.
 
-## What is ready
+## Explore the project
 
-- A three-page visual design preview with calculated results.
-- Your original synthetic source workbook and clean CSV extracts.
-- A tested SQL transformation, a reference snapshot and validation results.
-- Power Query code, DAX measures, page instructions and a practice walkthrough.
+- [Three-page portfolio PDF](portfolio/HeeJung_Kim_AR_Collections_Portfolio.pdf): Overview, Customers and Collection Worklist.
+- [Business findings and proposed actions](README.md).
+- [Data validation and reproducible checks](validation/README.md).
 
-**What remains:** build and test the report in Power BI Desktop, save the PBIX, then publish and test its viewing link. The preview PDF is a report design, not a screenshot from Power BI. No completed PBIX or new public report link is included.
+The PDF and images show the report design using calculated results. A completed PBIX, screenshots from Power BI Desktop and a public viewing link are not yet included in this repository.
 
-## Your first task
+## Repository contents
 
-1. Unzip this folder. Open `preview/AR_Portfolio_Preview.pdf` to see the intended result.
-2. Open Power BI Desktop. Choose **Get data > Excel workbook**.
-3. Open `data/AR_Collections_PowerBI_Starter.xlsx`.
-4. In Navigator, select the named **Customers, Invoices, Payments and Calendar** tables. Do not also select their worksheet copies or the existing ARSnapshot table.
-5. Choose **Transform Data**. Confirm that the four query names are exactly Customers, Invoices, Payments and Calendar.
-6. Follow `docs/Power_BI_Build_Guide.md`, beginning with the ARSnapshot query. Save your work as `AR_Collections_Portfolio.pbix`.
+| Folder | Contents |
+|---|---|
+| [data](data) | Synthetic customer, invoice, payment and calendar CSVs, plus a reference AR snapshot |
+| [sql](sql) | SQLite snapshot transformation, data checks and a Python runner |
+| [powerbi](powerbi) | Power Query transformation and DAX measures |
+| [portfolio](portfolio) | Three report-design images and the complete PDF |
+| [validation](validation) | Reproducible validation script, check results, customer summary and collection worklist |
 
-Start with the overview page. You do not need to complete all three pages in one sitting. Continue applying for suitable jobs while you build.
+## Reproduce the analysis
 
-## Before replacing your resume link
+From the repository root, run:
 
-- Confirm the unfiltered totals match the reference values in the guide.
-- Test customer/region filters and customer drill-through.
-- Replace the design preview with actual screenshots from your finished report.
-- Record the walkthrough only after you understand and can demonstrate every step.
-- Test the new viewing link in a signed-out/private browser window.
-- Update your resume and LinkedIn Featured link after the new report works.
+```bash
+python sql/run_analysis.py
+python validation/validate_portfolio.py
+```
 
-The project uses fictional data. The proposed actions are recommendations; no real cash recovery or business savings have been achieved.
+Both scripts use Python 3 and its standard library; no additional packages are required. The validation script reruns the SQL analysis automatically, so the second command alone is sufficient for a full check.
+
+SQL outputs are written to `sql/results/`. The validation script updates `validation/Validation_Result.json` and exits with an error if a check fails. Source CSVs are not modified.
+
+## Build the Power BI report
+
+1. In Power BI Desktop, import `Customers.csv`, `Invoices.csv`, `Payments.csv` and `Calendar.csv` from the `data` folder using **Get data > Text/CSV**. Name the queries **Customers**, **Invoices**, **Payments** and **Calendar**.
+2. In Power Query, keep IDs as **Text**, dates as **Date**, monetary fields as **Fixed decimal number**, and calendar sorting fields as **Whole number**.
+3. Create a blank query named **ARSnapshot**. Replace its Advanced Editor contents with [ARSnapshot.pq](powerbi/ARSnapshot.pq). The snapshot date is fixed at **30 September 2026**.
+4. Create one-to-many, single-direction relationships from **Customers[CustomerID]** to **ARSnapshot[CustomerID]** and **Payments[CustomerID]**, and from **Calendar[Date]** to **Payments[PaymentDate]**. Calendar filters cash receipts; the AR snapshot remains fixed. Avoid a Calendar relationship to ARSnapshot for this design.
+5. Create the measures from [Measures.dax](powerbi/Measures.dax) individually. Sort **ARSnapshot[AgingBucket]** by **AgingSort**, and **Calendar[YearMonth]** by **YearMonthSort**.
+6. Build the three pages using the portfolio designs. Test the totals, customer filters, date filters and drill-through in Desktop before publishing.
+
+With no filters, expected balances are **CAD 1,548,971.19 outstanding** and **CAD 980,235.72 overdue**. Compare more detailed rows with [ARSnapshot_reference.csv](data/ARSnapshot_reference.csv).
+
+## Power BI verification
+
+The SQL validation is reproducible from the committed files. Power BI verification covers the following separate checks:
+
+- Refresh the PBIX from the source CSVs and compare the DAX totals with the reference snapshot.
+- Confirm that customer filters affect receivables and payments, while date filters affect cash receipts only.
+- Check drill-through navigation and capture screenshots of the finished report.
+- Verify access to any published report link while signed out.
+
+All data is fictional. Collection actions are proposed recommendations; this project does not claim actual cash recovery or business savings.
+
