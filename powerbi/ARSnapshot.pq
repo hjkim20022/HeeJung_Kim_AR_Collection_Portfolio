@@ -1,6 +1,4 @@
-// Create a blank query called ARSnapshot in Power Query.
-// Paste this into Advanced Editor after importing Invoices and Payments.
-// This is a fixed-date snapshot. Changing the date requires refresh.
+
 let
     SnapshotDate = #date(2026, 9, 30),
     InvoiceTypes = Table.TransformColumnTypes(Invoices, {
